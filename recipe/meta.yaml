@@ -1,5 +1,5 @@
 {% set name = "vibehdf5" %}
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/vibehdf5-{{ version }}.tar.gz
-  sha256: 7cbcb45a58d258dd8d5c4b72374e60ba211f1260798f87b19c8acd174ceea057
+  sha256: b2c266e229f43b5215c2daa4de9bad0beb6b4e45c0b8e3a192eac1880f1e96c6
 
 build:
   entry_points:
     - vibehdf5 = vibehdf5.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -38,7 +38,7 @@ requirements:
     - scipy >=1.15.2
     - pydot >=4.0.1
     - pygraphviz >=1.14
-    
+
 test:
   imports:
     - vibehdf5
