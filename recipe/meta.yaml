@@ -1,5 +1,5 @@
 {% set name = "vibehdf5" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/vibehdf5-{{ version }}.tar.gz
-  sha256: c86d94d684f0980f15d40fa8f8faf6df99c2fcb40df38be1b058df1e7147dfd4
+  sha256: c4e4c26118a61c2dc22c33e14c307620b63d032db219b3050ff13f77d8a3d72c
 
 build:
   entry_points:
