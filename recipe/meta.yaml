@@ -12,8 +12,10 @@ source:
 build:
   entry_points:
     - vibehdf5 = vibehdf5.__main__:main
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: 
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    - mkdir -p $PREFIX/Menu
+    - cp $RECIPE_DIR/menu.json $PREFIX/Menu/
   number: 0
 
 requirements:
@@ -38,7 +40,8 @@ requirements:
     - scipy >=1.15.2
     - pydot >=4.0.1
     - pygraphviz >=1.14
-
+    - menuinst
+    
 test:
   imports:
     - vibehdf5

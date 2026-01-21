@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "https://schemas.conda.io/menuinst-1.schema.json",
+  "menu_name": "vibehdf5",
+  "menu_items": [
+    {
+      "name": "VibeHDF5",
+      "description": "A lightweight GUI to browse and interact with HDF5 file structures",
+      "command": ["vibehdf5"],
+      "icon": "{{ PYTHON }}/lib/site-packages/vibehdf5/icon.png",
+      "platforms": {
+        "win": {
+          "desktop": true,
+          "quicklaunch": false
+        },
+        "linux": {
+          "Categories": [
+            "Development",
+            "Utility"
+          ]
+        },
+        "osx": {
+          "CFBundleIdentifier": "com.vibehdf5.app"
+        }
+      }
+    }
+  ]
+}
